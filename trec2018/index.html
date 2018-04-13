@@ -107,8 +107,15 @@
 				  <header class="major">
 				  <h2>Guidelines</h2>
 				  </header>
-				  <p>The goal in each task is the same: to replicate results described in the paper for that task.  Specific resources and information are given below in each task</p>
+				  <p>The goal in each task is the same: to replicate results described in the paper for that task.  Specific resources and information are given below in each task.  Participants may choose to take part in one, two or all three tasks. Participants must also post their code to the CENTRE Bitbucket repository, and follow the track guidelines for the format of the notebook paper.</p>
+				  <h4>Bitbucket repository</h4>
+				  <p>Bitbucket is basically just commercial Github, so if you are used to Github, Bitbucket will be very familiar.  To request your repo, contact INFO HERE</p>
+				  <h4>Notebook paper format</h4>
+				  <p>coming soon</p>
+				  
 				  <h4>Task 1: Clinical Decision Support 2016</h4>
+				  <p>The TREC Clinical Decision Support (CDS) track featured an adhoc task where queries took the form of a patient note from a health record and a query "goal": determine a diagnosis, identify a treatment, or propose a test.  Systems search medical journal articles for relevant information for that patient's clinical situation.</p>
+				  
 				  <p>Task 1 will attempt to reproduce the runs from the MERCKKGAA group from the TREC 2016 Clinical Decision Track:<br/>
 				  <strong>[Gurulingappa et al, 2016]</strong> Gurulingappa, H., Toldo, L., Schepers, C., Bauer, A., and Megaro, G. (2016) <a href="https://trec.nist.gov/pubs/trec25/papers/MERCKKGAA-CL.pdf" target="_blank">Semi-Supervised Information Retrieval System for Clinical Decision Support.</a> In TREC 2016.<br/>
 
@@ -116,16 +123,54 @@
 				  <p>Resources for this task:
 				  <ul>
 				    <li><a href="https://trec.nist.gov/pubs/trec25/papers/Overview-CL.pdf">CDS 2016 Overview Paper</a></li>
-				    <li><a href="http://www.trec-cds.org/2016.html">CDS 2016 Track Homepage</a>, which includes links to the PMC-2016 document set, the topics, and the run format.</li>
-				  </ul>
+				    <li><a href="http://www.trec-cds.org/2016.html">CDS 2016 Track Homepage</a></li>
+				    <li><a href="http://www.trec-cds.org/2016.html#documents">Documents</a></li>
+				    <li><a href="http://www.trec-cds.org/2016.html#topics">Topics</a></li>
+				    <li><a href="https://trec.nist.gov/data/clinical2016.html">Relevance judgments and evaluation scripts</a></li>
+				  </ul></p>
 
 				  <h4>Task 2: Web Track 2013</h4>
+				  <p>The Web Track in 2013 had an adhoc web search task with an unusual measurement approach: risk-sensitivity, which is the tradeoff between improving the overall score for a system against performing poorly on individual topics.  We will be ignoring the risk-sensitivity portion of the task to focus on the traditional adhoc task.  The search topics were split into a head-query diversity ranking subset and a tail-query single intent subset.  The collection is ClueWeb12.  Because the pools for this track were originally quite shallow, if resources allow we will pool CENTRE submissions and do new relevance judgments.</p>
+				  
 				  <p>Task 2 will attempt to reproduce the runs from the University of Delaware (Fang) group from TREC Web Track 2013:<br/>
 				  <strong>[Yang et al, 2013]</strong> Yang, P., and Fang, H. (2013). <a href="http://trec.nist.gov/pubs/trec22/papers/udel_fang-web.pdf" target="_blank">Evaluating the Effectiveness of Axiomatic Approaches in Web Track.</a> In TREC 2013.<br/>
-
+				  The University of Delaware group's system takes an initial retrieval from Indri and reranks it using models from the axiomatic approach to IR.  Two runs are described in the paper, and participants in task 2 will need to attempt to recreate both of them.<p>
+				  <p>Resources for this task:
+				  <ul>
+				    <li><a href="https://www.lemurproject.org/clueweb12.php">The ClueWeb12 collection</a></li>
+				    <li><a href="https://www.lemurproject.org/indri.php">The Indri search engine</a></li>
+				    <li><a href="https://www.microsoft.com/en-us/research/project/trec-web-track-2013">TREC 2013 Web Track homepage</a></li>
+				    <li><a href="https://trec.nist.gov/data/web/2013/web2013.topics.txt">Topics</a> that should be used in this task (NOT the full topics!)</li>
+				    <li><a href="https://trec.nist.gov/data/web2013.html">Relevance judgments, baselines, evaluation code.</li>
+				  </ul>
 
 				  <h4>Task 3: Web Track 2014</h4>
-							<li><strong>[McCreadie et al, 2014]</strong> McCreadie, R., Deveaud, R., Albakour, M., Mackie, S., Limsopatham, N., Macdonald, C., Ounis, I., and Thonet, T. (2014). <a href="http://trec.nist.gov/pubs/trec23/papers/pro-uogTr_cs-ts-web.pdf" target="_blank">University of Glasgow at TREC 2014: Experiments with Terrier in Contextual Suggestion, Temporal Summarisation and Web Tracks.</a> In TREC 2014.</li>
+				  <p> The Web Track in 2014 featured an adhoc task identical to the 2013 formulation of the task (the changes in the track were on the risk sensitivity metrics), so see above.</p>
+				  <p> Task 3 will attempt to reproduce runs from the Terrier team at UGlagow:<br/>
+				  <strong>[McCreadie et al, 2014]</strong> McCreadie, R., Deveaud, R., Albakour, M., Mackie, S., Limsopatham, N., Macdonald, C., Ounis, I., and Thonet, T. (2014). <a href="http://trec.nist.gov/pubs/trec23/papers/pro-uogTr_cs-ts-web.pdf" target="_blank">University of Glasgow at TREC 2014: Experiments with Terrier in Contextual Suggestion, Temporal Summarisation and Web Tracks.</a> In TREC 2014.<br/>
+				  <p>The Glasgow group submitted three runs to the adhoc task, each using a learning-to-rank techniques which are implemented to some degree in released versions of Terrier.</p>
+				  <p>Resources for this task:
+				  <ul>
+				    <li><a href="https://trec.nist.gov/pubs/trec23/papers/overview-web.pdf">2014 Web Track overview</a></li>
+				    <li><a href="http://www-personal.umich.edu/~kevynct/trec-web-2014/">Track guidelines</a></li>
+				    <li><a href="https://trec.nist.gov/data/web/2014/web2014.topics.txt">Topics</a> (not the full topics please.)</li>
+				    <li><a href="https://trec.nist.gov/data/web2014.html">Relevance judgments, baselines, evaluation code</li>
+				    <li><a href="http://terrier.org/">Terrier IR platform from Glasgow</a></li>
+				  </ul>
+
+				  <h4>Submission requirements</h4>
+				  <p>Runs for all tasks must be submitted in the classic TREC format:
+				  <pre><code>
+30 Q0 ZF08-175-870  0 4238 prise1
+30 Q0 ZF08-306-044  1 4223 prise1
+30 Q0 ZF09-477-757  2 4207 prise1
+30 Q0 ZF08-312-422  3 4194 prise1
+30 Q0 ZF08-013-262  4 4189 prise1
+...
+				  </code></pre>
+				  Field 1 is the topic ID.  Field 2 is a literal "Q0".  Field 3 is the document ID.  Field 4 is the rank for this document, but it is not used for scoring in trec_eval.  Field 5 is the score for this documents for this topic, and is the sort field for evaluation.  Field 6 is your run tag.</p>
+				  <p>Your run tag should follow the format [group-id]-[target-run]-[n], where [group-id] is your group ID that you registered with for TREC, [target-run] is the runtag of the run you are replicating, and [n] is a submission count.  You can submit up to 3 replication sets for each task.  That is, for task 1, the SNIT group could submit 'SNIT-MRKPrfNote-1', 'SNIT-MRKPrfNote-2', 'SNIT-MRKPrfNote-3', 'SNIT-MRKUmlsSolr-1', 'SNIT-MRKUmlsSolr-2' and 'SNIT-MRKUmlsSolr-3'.</p>
+				  <p>We will report the score range for replications, which you will already know because the relevance judgments and scoring scripts are linked above, with the possible wrinkle of new relevance judgments for web track replicates if resources allow.  The real track result is the notebook paper.</p>
 				</div>
 			</section>
 
