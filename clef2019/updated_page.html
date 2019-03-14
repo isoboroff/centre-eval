@@ -68,10 +68,10 @@
 							Since CENTRE is a joint CLEF/NTCIR/TREC activity, participants in Tasks 1 and 2 will be challenged to reproduce methods and systems developed in all the evaluation campaigns, i.e. CLEF will challenge against NTCIR and TREC results in addition to CLEF results.
 							</p>
 							<p>
-							To participate in the lab, the groups need to register (<strong>by TBA</strong>) at the following link:
+							To participate in the lab, the groups need to register (<strong>by April, 26</strong>) at the following link:
 							</p>
 							<p class="textcenter">
-							<span><a href="#" target="_blank" class="button special">TBA</a></span>
+							<span><a href="http://clef2019-labs-registration.dei.unipd.it/" target="_blank" class="button special">Sign Up</a></span>
 							</p>
 
 						</div>
@@ -97,7 +97,7 @@
 						<header class="major">
 							<h2>Important Dates</h2>
 						</header>
-						<p>Registration closes: <strong>TAB</strong></p>
+						<p>Registration closes: <strong>April 26, 2019</strong></p>
 						<p>Runs due from participants: <strong>TBA</strong></p>
 						<p>Submission of participant papers: <strong>TBA</strong></p>
 						<p>Notification of acceptance: <strong>TBA</strong></p>
@@ -114,7 +114,82 @@
 					<header class="major">
 						<h2>Tasks Description</h2>
 					</header>
-						<p>TBA</p>
+						<p class="nomargin">For Task 1 - Replicability and Task 2 - Reproducibility we selected the following papers from TREC Common Core Track 2017 and 2018:</p>
+						<ul>
+							<li><strong>[Grossman et al, 2017]</strong> Grossman, M. R., and Cormack, G. V. (2017). <a href="https://trec.nist.gov/pubs/trec26/papers/WaterlooCormack-CC.pdf" target="_blank">MRG_UWaterloo and Waterloo Cormack Participation in the TREC 2017 Common Core Track.</a> In TREC 2017.</li>
+
+							<li><strong>[Benham et al, 2018]</strong> Benham, R., Gallagher, L., Mackenzie, J., Liu, B., Lu, X., Scholer, F., Moffat, A., and Culpepper, J. S. (2018). <a href="https://trec.nist.gov/pubs/trec27/papers/RMIT-CC.pdf" target="_blank">RMIT at the 2018 TREC CORE Track.</a> In TREC 2018.</li>
+
+						</ul>
+
+						<p>The following table reports, for each paper, the name of the runs to be replicated and/or reproduced and the datasets and topics to be used for the replicability and reproducibility tasks.</p>
+
+						<div class="table-wrapper">
+							<table class="alt">
+								<thead>
+									<tr>
+										<th>Paper</th>
+										<th>Run Name</th>
+										<th>Replicability Task</th>
+										<th>Reproducibility Task</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>[Grossman et al, 2017]</td>
+										<td><font face = "courier">WCrobust04</font> and <font face = "courier">WCrobust0405</font></td>
+										<td>New York Times Annotated Corpus, with TREC 2017 Common Core Topics</td>
+										<td>TREC Washington Post Corpus, with TREC 2018 Common Core Topics</td>
+									</tr>
+									<tr>
+										<td>[Benham et al, 2018]</td>
+										<td><font face = "courier">RMITFDA4</font> and <font face = "courier">RMITEXTGIGADA5</font></td>
+										<td>TREC Washington Post Corpus, with TREC 2018 Common Core Topics</td>
+										<td>New York Times Annotated Corpus, with TREC 2017 Common Core Topics</td>
+									</tr>
+									<!--
+									<tr>
+										<td>[Xu et al, 2014]</td>
+										<td>Terran</td>
+										<td>ClueWeb12 Category A with topics of 2014</td>
+										<td>ClueWeb12 Category B with topics of 2014, and ClueWeb12 Category A and B with topics from 2013</td>
+									</tr>
+									-->
+								</tbody>
+								<!--
+								<tfoot>
+									<tr>
+										<td colspan="2"></td>
+										<td>100.00</td>
+									</tr>
+								</tfoot>
+							-->
+							</table>
+						</div>
+
+						<p class="nomargin">Task 3 - Generalizability is a new task and will work as follows:</p>
+						<ol>
+							<li>Training: participants are given topics, ground-truth, and a set of sub-collections, we ask participants to work on a selected method (e.g. a specific lucene with BM25, ….) and, if they wish, also on their own method. The first one is intended to allow for comparability across participants;
+							participant identify features of collections and methods that allow them to rank and predict collection.</li>
+							<li>Test: we give to the participants a different set of sub-collections and they have to rank these collections with respect to the mandatory method and their own method.</li>
+							<li>Validation (after submission): we provide topics and ground-truth on the test sub-collections and it is now possible to verify how the different method perform over them.</li>
+						</ol>
+
+						<h3>Corpora:</h3>
+						
+						<p> The <strong>New York Times Annotated Corpus</strong> contains over 1.8 million articles written and published by the New York Times between January 1, 1987 and June 19, 2007. The text in this corpus is formatted in News Industry Text Format (NITF), which is an XML specification that provides a standardized representation for the content and structure of discrete news articles. The dataset can be downloaded <a href="https://catalog.ldc.upenn.edu/LDC2008T19" target="_blank">here</a>.</p>
+
+						<p>The TREC Washington Post Corpus contains 608,180 news articles and blog posts from January 2012 through August 2017. The articles are stored in JSON format, and include title, byline, date of publication, kicker (a section header), article text broken into paragraphs, and links to embedded images and multimedia. The dataset can be downloaded <a href="https://trec.nist.gov/data/wapost/" target="_blank">here</a>.
+						</p>
+
+						<h3>Topics and Qrels:</h3>
+
+						<ul>
+							<li>TREC 2017, Common Core Track: <a href="https://trec.nist.gov/data/core/core_crowd.txt" target="_blank">topics</a>, <a href="https://trec.nist.gov/data/core/qrels.txt" target="_blank">qrels</a>.
+							</li>
+							<li>TREC 2018, Common Core Track: <a href="https://trec.nist.gov/data/core/topics2018.txt" target="_blank">topics</a>, <a href="https://trec.nist.gov/data/core/qrels2018.txt" target="_blank">qrels</a>.
+							</li>
+						</ul>
 
 					<!--
 					<div class="row 150%">
@@ -153,7 +228,68 @@
 						<h2>Submission Guidelines</h2>
 					</header>
 
-					<p>TBA</p>
+					<p class="nomargin">
+						Participating teams should satisfy the following guidelines:
+						<ul>
+						<li>Preferably use an open source IR system, e.g. Lucene, Terrier, Indri, Atire;</li>
+						<li>The runs should be submitted in TREC format;</li>
+						<li>For the replicability task, each group can submit a maximum of <strong>three runs</strong> replicating the given original run;</li>
+						<li>For the reproducibility task, each group can submit just <strong>one run</strong> reproducing the given original run;</li>
+						<li>The code used to produce the runs should be uploaded in a Bitbucket repository provided by the organizers upon the registration to <a href="http://clef2019-labs-registration.dei.unipd.it/" target="_blank">CENTRE@CLEF 2019</a>.</li>
+					</ul>
+					</p>
+
+					<h3>Trec Format:</h3>
+					<p>
+						Runs should be submitted with the following format: </br>
+						<pre><code>
+30 Q0 ZF08-175-870  0 4238 prise1
+30 Q0 ZF08-306-044  1 4223 prise1
+30 Q0 ZF09-477-757  2 4207 prise1
+30 Q0 ZF08-312-422  3 4194 prise1
+30 Q0 ZF08-013-262  4 4189 prise1
+...
+   						</code></pre>
+						where:
+						<ul>
+							<li>Columns are separated by a white space;</li>
+							<li>The first column is the topic number;</li>
+							<li>The second column is the query number within that topic, which is currently unused and should always be Q0;</li>
+							<li>The third column is the official document number of the retrieved document, which is the number found in the &quot;docno&quot; field of the document;</li>
+							<li>The fourth column is the rank at which the document is retrieved;</li>
+							<li>The fifth column shows the score (integer or floating point) that generated the ranking. This score must be in descending (non-increasing) order. It is important to include the score so that we can handle tied scores (for a given run) in a uniform fashion (trec_eval sorts documents by these scores, not your ranks);</li>
+							<li>The sixth column is called the &quot;run tag&quot; and should be an unique identifier for your group AND for the method used. That is, each run should have a different tag that identifies the group and the method that produced the run.</li>
+						</ul>
+
+						It is important to include all the columns and have a white space delimiter between the columns.
+					<p>
+					</p>
+						Runs should be submitted by email to Maria Maistro: <a href="mailto:maistro@dei.unipd.it" target="_blank"><samp>maistro<i class="fa fa-at"></i>dei.unipd.it</samp></a>
+					</p>
+					<!--
+					<p class="textcenter">
+						<span><a href="TBA" target="_blank" class="button special">TBA</a></span>
+					</p>
+					-->
+					<h3>Evaluation:</h3>
+                    <p class="nomargin"> 
+                    	The quality of the submitted runs will be evaluated with different measures depending on the task:
+                    </p>
+                	<ul>
+                		<li>Task 1 - Replicability:</li>
+                		<ul class="nomargin">
+                			<li><strong>Effectiveness</strong>: how close are the performance scores of the reproduced systems to those of the original ones. This will be measured using the RMSE between the new and original MAP scores;</li>
+                			<li><strong>Correlation</strong>: since different result lists may produce the same effectiveness score, we will also measure how close are the ranked results list of the reproduced systems to those of the original ones. This will be measured using Kendall’s tau.</li>
+                		</ul>
+                		<li>Task 2 - Reproducibility:</li>
+                		<ul class="nomargin">
+                			<li><strong>Improvement over the baseline</strong>: since for the reproducibility task we do not have the original run, we will compare the reproduced run score with a baseline score to see whether the improvement over the baseline is comparable between the original and the new dataset.</li>
+                		</ul>
+                		<li>Task 3 - Generalizability:</li>
+                		<ul class="nomargin">
+                			<li><strong>Absolute error</strong>: we will compare the predicted run score with the original run score. This will be measured with Mean Absolute Error and RMSE between the predicted and original MAP scores.</li>
+                		</ul>
+                	</ul>
 					
 				</div>
 			</section>
@@ -171,7 +307,8 @@
 						<a href="http://www.is.informatik.uni-duisburg.de/staff/fuhr.html" target="_blank"><strong>Norbert Fuhr</strong></a>, University of Duisburg-Essen, Germany <br /><samp>norbert.fuhr<i class="fa fa-at"></i>uni-due.de</samp>
 					</p>
 					<p>
-						<a href="http://www.dei.unipd.it/~maistro/" target="_blank"><strong>Maria Maistro</strong></a>, University of Padua, Italy <br /><samp>maistro<i class="fa fa-at"></i>dei.unipd.it</samp>
+						<a href="http://www.dei.unipd.it/~maistro/" target="_blank"><strong>Maria Maistro</strong></a>, University of Padua, Italy <br /><samp>maistro<i class="fa fa-at"></i>dei.unipd.it</samp><br />
+						and University of Copenhagen, Denmark <br /><samp>mm<i class="fa fa-at"></i>di.ku.dk</samp>
 					</p>
                     <p> 
                     	<a href="http://www.f.waseda.jp/tetsuya/sakai.html" target="_blank"><strong>Tetsuya Sakai</strong></a>, Waseda University, Japan <br /> <samp>tetsuyasakai<i class="fa fa-at"></i>acm.org</samp>
