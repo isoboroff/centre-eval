@@ -98,10 +98,10 @@
 							<h2>Important Dates</h2>
 						</header>
 						<p>Registration closes: <strong>April 26, 2019</strong></p>
-						<p>Runs due from participants: <strong>TBA</strong></p>
-						<p>Submission of participant papers: <strong>TBA</strong></p>
-						<p>Notification of acceptance: <strong>TBA</strong></p>
-						<p>Camera ready due: <strong>TBA</strong></p>
+						<p>Runs due from participants: <strong>May 10, 2019</strong></p>
+						<p>Submission of participant papers: <strong>May 24, 2019</strong></p>
+						<p>Notification of acceptance: <strong>June 14, 2019</strong></p>
+						<p>Camera ready due: <strong>June 29, 2019</strong></p>
 						<p>CLEF 2019 conference: September 09-12, 2019</p>
 						<!--</div>-->
 					<!--</div>-->
@@ -169,25 +169,30 @@
 
 						<p class="nomargin">Task 3 - Generalizability is a new task and will work as follows:</p>
 						<ol>
-							<li>Training: participants are given topics, ground-truth, and a set of sub-collections, we ask participants to work on a selected method (e.g. a specific lucene with BM25, ….) and, if they wish, also on their own method. The first one is intended to allow for comparability across participants;
-							participant identify features of collections and methods that allow them to rank and predict collection.</li>
-							<li>Test: we give to the participants a different set of sub-collections and they have to rank these collections with respect to the mandatory method and their own method.</li>
-							<li>Validation (after submission): we provide topics and ground-truth on the test sub-collections and it is now possible to verify how the different method perform over them.</li>
+							<li>Training: participants need to run plain BM25 and, if they wish, also their own system on the test collection used for TREC 2004 Robust Track (they are allowed to use the corpus, topics and qrels). Participants need to identify features of the corpus and topics that allow them to predict the system score with respect to Average Precision (AP).
+							</li>
+							<li>Validation: participants can use the test collection used for TREC 2017 Common Core Track (corpus, topics and qrels) to validate their method and determine which set of features represent the best choice for predicting AP score for each system. Note that the TREC 2017 Common Core Track topics are an updated version of the TREC 2004 Robust track topics.</li>
+							<li>Test (submission): participants need to use the test collection used for TREC 2018 Common Core Track (only corpus and topics). Note that the TREC 2018 Common Core Track topics are a mix of "old" and "new" topics, where old topics were used in TREC 2017 Common Core tracks. Participants will submit a run for each system (BM25 and their own system) and an additional file (one for each system) including the AP score predicted for each topic. The score predicted can be a single value or a value with the corresponding confidence interval.</li>
 						</ol>
 
 						<h3>Corpora:</h3>
 						
-						<p> The <strong>New York Times Annotated Corpus</strong> contains over 1.8 million articles written and published by the New York Times between January 1, 1987 and June 19, 2007. The text in this corpus is formatted in News Industry Text Format (NITF), which is an XML specification that provides a standardized representation for the content and structure of discrete news articles. The dataset can be downloaded <a href="https://catalog.ldc.upenn.edu/LDC2008T19" target="_blank">here</a>.</p>
+						<p> The <strong>New York Times Annotated Corpus</strong> contains over 1.8 million articles written and published by the New York Times between January 1, 1987 and June 19, 2007. The text in this corpus is formatted in News Industry Text Format (NITF), which is an XML specification that provides a standardized representation for the content and structure of discrete news articles. The dataset is available <a href="https://catalog.ldc.upenn.edu/LDC2008T19" target="_blank">here</a>.</p>
 
-						<p>The TREC Washington Post Corpus contains 608,180 news articles and blog posts from January 2012 through August 2017. The articles are stored in JSON format, and include title, byline, date of publication, kicker (a section header), article text broken into paragraphs, and links to embedded images and multimedia. The dataset can be downloaded <a href="https://trec.nist.gov/data/wapost/" target="_blank">here</a>.
+						<p>The <strong>TREC Washington Post Corpus</strong> contains 608,180 news articles and blog posts from January 2012 through August 2017. The articles are stored in JSON format, and include title, byline, date of publication, kicker (a section header), article text broken into paragraphs, and links to embedded images and multimedia. The dataset is available <a href="https://trec.nist.gov/data/wapost/" target="_blank">here</a>.
+						</p>
+
+						<p> The <strong>TREC 2004 Robust Corpus</strong> corresponds to the set of documents on TREC disks 4 and 5, minus the Congressional Record. This document set contains approximately 528,000 documents. The dataset is available <a href="https://trec.nist.gov/data/qa/T8_QAdata/disks4_5.html" target="_blank">here</a>.
 						</p>
 
 						<h3>Topics and Qrels:</h3>
 
 						<ul>
-							<li>TREC 2017, Common Core Track: <a href="https://trec.nist.gov/data/core/core_crowd.txt" target="_blank">topics</a>, <a href="https://trec.nist.gov/data/core/qrels.txt" target="_blank">qrels</a>.
+							<li>TREC 2017, Common Core Track: <a href="https://trec.nist.gov/data/core/core_nist.txt" target="_blank">topics</a>, <a href="https://trec.nist.gov/data/core/qrels.txt" target="_blank">qrels</a>;
 							</li>
-							<li>TREC 2018, Common Core Track: <a href="https://trec.nist.gov/data/core/topics2018.txt" target="_blank">topics</a>, <a href="https://trec.nist.gov/data/core/qrels2018.txt" target="_blank">qrels</a>.
+							<li>TREC 2018, Common Core Track: <a href="https://trec.nist.gov/data/core/topics2018.txt" target="_blank">topics</a>, <a href="https://trec.nist.gov/data/core/qrels2018.txt" target="_blank">qrels</a>;
+							</li>
+							<li>TREC 2004, Robust Track: <a href="https://trec.nist.gov/data/robust/04.testset.gz" target="_blank">topics</a>, <a href="https://trec.nist.gov/data/robust/qrels.robust2004.txt" target="_blank">qrels</a>.
 							</li>
 						</ul>
 
@@ -264,7 +269,10 @@
 						It is important to include all the columns and have a white space delimiter between the columns.
 					<p>
 					</p>
-						Runs should be submitted by email to Maria Maistro: <a href="mailto:maistro@dei.unipd.it" target="_blank"><samp>maistro<i class="fa fa-at"></i>dei.unipd.it</samp></a>
+						Runs should be uploaded in the Bitbucket repository provided by the organizers. Participants need to create a folder named <code>submission</code> containing 2 folders named <code>official</code> and <code>unofficial</code>. Each sub-folder will contain 3 folders, one for each task, named: <code>task1</code>, <code>task2</code>, and <code>task3</code>. Thus, a run submitted for replicability should be included in <code>submission/official/task1</code>.
+					</p>
+					<p>	
+						Finally, runs should be submitted with the following name convention: <code>&lt;teamname&gt;_&lt;task&gt;_&lt;system&gt;_&lt;freefield&gt;</code> where <code>teamname</code> is the name of the participating team, <code>task</code> can be either <code>task1</code>, <code>task2</code>, or <code>task3</code> depending on the task, <code>system</code> is the name of the reproduced/replicated run or the system used for Task 3, and <code>freefield</code> is a free field that participants can use as they prefer.
 					</p>
 					<!--
 					<p class="textcenter">
